@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{35C81CB6-74A0-4265-9310-AE78AF560677}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CashDrawer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="POSKeyboard.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="POSPrinter.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Scanner.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CashDrawer">
+        <MSBuild Projects="CashDrawer.dproj"/>
+    </Target>
+    <Target Name="CashDrawer:Clean">
+        <MSBuild Projects="CashDrawer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CashDrawer:Make">
+        <MSBuild Projects="CashDrawer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="POSKeyboard">
+        <MSBuild Projects="POSKeyboard.dproj"/>
+    </Target>
+    <Target Name="POSKeyboard:Clean">
+        <MSBuild Projects="POSKeyboard.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="POSKeyboard:Make">
+        <MSBuild Projects="POSKeyboard.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="POSPrinter">
+        <MSBuild Projects="POSPrinter.dproj"/>
+    </Target>
+    <Target Name="POSPrinter:Clean">
+        <MSBuild Projects="POSPrinter.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="POSPrinter:Make">
+        <MSBuild Projects="POSPrinter.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Scanner">
+        <MSBuild Projects="Scanner.dproj"/>
+    </Target>
+    <Target Name="Scanner:Clean">
+        <MSBuild Projects="Scanner.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Scanner:Make">
+        <MSBuild Projects="Scanner.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CashDrawer;POSKeyboard;POSPrinter;Scanner"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CashDrawer:Clean;POSKeyboard:Clean;POSPrinter:Clean;Scanner:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CashDrawer:Make;POSKeyboard:Make;POSPrinter:Make;Scanner:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

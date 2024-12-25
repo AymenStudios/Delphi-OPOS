@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/12/25 15:10:54.000.869,=rtl.dcp</Transaction>
+    <Transaction>2024/12/25 15:10:56.000.690,=C:\Users\Aymen\Documents\Embarcadero\Studio\23.0\Imports\OposScanner_CCO_TLB.pas</Transaction>
+    <Transaction>2024/12/25 15:10:56.000.642,=C:\Users\Aymen\Documents\Embarcadero\Studio\23.0\Imports\OposScanner_CCO_TLB.pas</Transaction>
+    <Transaction>2024/12/25 15:10:56.000.721,=vcl.dcp</Transaction>
+  </Transactions>
+</BorlandProject>
